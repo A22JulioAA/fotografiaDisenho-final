@@ -1,0 +1,231 @@
+/* Elementos generales */
+.hidden {
+  display: none;
+}
+
+/* Sección Contacto y Footer */
+#contactAndFooter {
+  color: white;
+}
+
+#contactAndFooter h2 {
+  color: var(--color-secundario);
+  font-size: 3em;
+  margin-bottom: 10em;
+}
+
+#contactSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Formulario */
+.form {
+  background: linear-gradient(to bottom right,
+      var(--color-principal),
+      black,
+      var(--color-principal));
+  text-align: center;
+  border-radius: 20px;
+  box-sizing: border-box;
+  height: 46vh;
+  padding: 16px;
+  width: 45vw;
+}
+
+.title {
+  color: white;
+  font-family: sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  margin-top: 30px;
+}
+
+.subtitle {
+  color: rgb(212, 212, 212);
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+/* Contenedor de inputs */
+.input-container {
+  position: relative;
+  width: 100%;
+  height: 5vh;
+}
+
+.ic1 {
+  margin-top: 40px;
+}
+
+.ic2 {
+  margin-top: 30px;
+}
+
+/* Inputs */
+.input {
+  background-color: #303245;
+  border-radius: 12px;
+  box-sizing: border-box;
+  color: white;
+  font-size: 18px;
+  height: 100%;
+  outline: 0;
+  padding: 4px 20px 0;
+  width: 100%;
+}
+
+.input:not(.input_name) {
+  height: 10vh;
+}
+
+/* .input:focus {
+  background-color: var(--color-principal);
+} */
+
+.input:focus~.cut,
+.input:not(:placeholder-shown)~.cut {
+  transform: translateY(8px);
+}
+
+.input:focus~.placeholder,
+.input:not(:placeholder-shown)~.placeholder {
+  transform: translateY(-25px) translateX(9px) scale(0.75);
+}
+
+.input:not(:placeholder-shown)~.placeholder {
+  color: #808097;
+}
+
+.input:focus~.placeholder {
+  color: var(--color-secundario);
+}
+
+/* Cut */
+.cut {
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  width: 65px;
+  height: 20px;
+  background-color: #000000;
+  border-radius: 10px;
+  transform: translateY(0);
+  transition: transform 200ms;
+}
+
+.cut-short {
+  width: 50px;
+}
+
+/* Placeholder */
+.placeholder {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: white;
+  font-family: sans-serif;
+  line-height: 6px;
+  pointer-events: none;
+  transform-origin: 0 50%;
+  transition: transform 200ms, color 200ms;
+}
+
+/* Botón Submit */
+.submit {
+  background-color: var(--color-principal);
+  border: 0;
+  border-radius: 12px;
+  box-sizing: border-box;
+  color: #eee;
+  cursor: pointer;
+  font-size: 18px;
+  height: 50px;
+  margin-top: 9%;
+  text-align: center;
+  width: 100%;
+}
+
+.submit:active {
+  background-color: var(--color-secundario);
+  color: #000000;
+}
+
+/* Redes Sociales */
+.contactImage {
+  width: 25vw;
+}
+
+#contactAndFooter .icono-red-social {
+  font-size: 4em;
+  color: white;
+  padding: 5vh;
+}
+
+#contactAndFooter .contactMedia {
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+  height: max-content;
+}
+
+#contactAndFooter .contactMedia:hover {
+  cursor: pointer;
+  color: var(--color-secundario);
+}
+
+#contactAndFooter .contactMedia:hover .icono-red-social {
+  color: var(--color-secundario);
+}
+
+#socialMediaContainer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border-radius: 10%;
+  background: linear-gradient(to bottom right,
+      var(--color-principal),
+      black,
+      var(--color-principal));
+}
+
+#redes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  color: var(--color-principal);
+  font-weight: bold;
+  border-top: 3px solid var(--color-principal);
+  margin-top: 5em;
+}
+
+footer p {
+  text-decoration: underline;
+  margin-bottom: 3em;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer-menu ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.footer-menu ul li a:hover {
+  color: var(--color-secundario);
+  transition: color 0.3s ease;
+}
