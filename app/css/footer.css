@@ -23,15 +23,17 @@
 
 /* Formulario */
 .form {
-  background: linear-gradient(to bottom right,
-      var(--color-principal),
-      black,
-      black,
-      var(--color-principal));
+  background: linear-gradient(
+    to bottom right,
+    var(--color-principal),
+    black,
+    black,
+    var(--color-principal)
+  );
   text-align: center;
   border-radius: 20px;
   box-sizing: border-box;
-  height: 46vh;
+  height: fit-content;
   padding: 16px;
   width: 45vw;
   border: 1px solid white;
@@ -89,21 +91,21 @@
   background-color: var(--color-principal);
 } */
 
-.input:focus~.cut,
-.input:not(:placeholder-shown)~.cut {
+.input:focus ~ .cut,
+.input:not(:placeholder-shown) ~ .cut {
   transform: translateY(8px);
 }
 
-.input:focus~.placeholder,
-.input:not(:placeholder-shown)~.placeholder {
+.input:focus ~ .placeholder,
+.input:not(:placeholder-shown) ~ .placeholder {
   transform: translateY(-25px) translateX(9px) scale(0.75);
 }
 
-.input:not(:placeholder-shown)~.placeholder {
+.input:not(:placeholder-shown) ~ .placeholder {
   color: #808097;
 }
 
-.input:focus~.placeholder {
+.input:focus ~ .placeholder {
   color: var(--color-secundario);
 }
 
@@ -140,7 +142,7 @@
 /* Botón Submit */
 .submit {
   background-color: var(--color-principal);
-  border: 0;
+  border: 1px solid white;
   border-radius: 12px;
   box-sizing: border-box;
   color: #eee;
@@ -189,12 +191,14 @@
   flex-direction: column;
   text-align: center;
   border-radius: 10%;
-  background: linear-gradient(to bottom right,
-      var(--color-principal),
-      black,
-      black,
-      var(--color-principal));
-      border: 1px solid white;
+  background: linear-gradient(
+    to bottom right,
+    var(--color-principal),
+    black,
+    black,
+    var(--color-principal)
+  );
+  border: 1px solid white;
 }
 
 #redes {
@@ -226,10 +230,32 @@ footer a {
   list-style: none;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .footer-menu ul li a:hover {
   color: var(--color-secundario);
   transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.swal2-popup {
+  background: linear-gradient(to bottom, #222, #444);
+  color: #fff;
+  border: 1px solid var(--color-secundario);
+}
+
+.swal2-title {
+  color: #ffcc00;
+}
+
+.swal2-confirm {
+  background-color: #ffcc00;
+  color: #222;
+  border-radius: 5px;
+  border: 1px solid var(--color-principal);
+}
+
+.swal2-confirm:hover {
+  background-color: #ffe066;
 }
